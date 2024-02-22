@@ -1,0 +1,58 @@
+// Caso 1
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+
+        if (a == 5) {
+            // Se crea un nuevo bloque con 'int a', que tiene un alcance limitado a este bloque
+            int aInsideBlock = 4;
+            // La variable 'b' se actualiza con el valor 1
+            b = 1;
+
+            // Se imprime el valor de la variable 'aInsideBlock' dentro de este bloque (será 4)
+            System.out.print(aInsideBlock);
+            
+            // Se imprime el valor de la variable 'b' dentro de este bloque (será 1)
+            System.out.print(b);
+        }
+
+        // Se imprime el valor de la variable 'a' fuera del bloque (será 5, ya que 'int a' dentro del bloque no afecta la variable 'a' externa)
+        System.out.print(a);
+        // Se imprime el valor de la variable 'b' fuera del bloque (será 1, ya que se actualizó dentro del bloque)
+        System.out.print(b);
+    }
+}
+
+
+// Caso 2
+
+public class Main {
+    public static void main(String[] args) {
+        // Se inicia un bucle 'for' con 'int i'
+        for (int i = 0; i < 10; i++) {
+            // Se imprime el valor de 'i' en cada iteración
+            System.out.print(i);
+        }
+
+        // Al intentar imprimir 'i' fuera del bucle, ocurrirá un error ya que 'i' solo existe dentro del bucle
+        // System.out.print(i); // Esto generará un error de compilación
+    }
+}
+
+//Caso 3
+public class Main {
+    public static void main(String[] args) {
+        // Se declara la variable 'z' con el valor 5
+        int z = 5;
+
+        // Se declara 'x' y 'y' y se inicializan
+        int x = z + 10, y = 12;
+
+        // Se imprime la suma de 'x + y'
+        System.out.print(x + y);
+    }
+}
+
+
